@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "RATISS-Framework — le protocole d'audit scientifique exécutable"
+message: >-
+  Couche 1 de RATISS Labs : protocole d'audit exécutable en stdlib Python
+  (sceaux SHA-256, journal des déviations chaîné, bornes de plausibilité
+  physique, résolution d'identifiants, commande unique de rejeu R7).
+type: software
+authors:
+  - family-names: Evina
+    given-names: Jonathan
+    affiliation: RATISS Labs, Yaoundé, Cameroun
+    orcid: https://orcid.org/0009-0000-4092-5313
+repository-code: https://github.com/brossbernard2-pixel/RATISS-Framework
+license: MIT
+date-released: 2026-09-13
+version: 0.2.0

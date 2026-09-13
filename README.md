@@ -5,9 +5,18 @@
 # RATISS-Framework
 ### le protocole d'audit scientifique exécutable
 
+[![CI](https://github.com/brossbernard2-pixel/RATISS-Framework/actions/workflows/tests.yml/badge.svg)](https://github.com/brossbernard2-pixel/RATISS-Framework/actions/workflows/tests.yml)
 ![tests](docs/badges/tests.svg) ![deps](docs/badges/stdlib.svg) ![license](docs/badges/license.svg) ![R7](docs/badges/r7.svg)
 
+![bannière](docs/img/banniere-framework.png)
+
 *Une seule loi : **R7** — aucune affirmation publique sans qu'un étranger puisse la reproduire en une commande.*
+
+**EN :** *An executable scientific-audit protocol in pure Python stdlib:
+sealed hashes, chained deviation journals, physical-plausibility bounds,
+identifier resolution — and one command that replays every published
+verdict. Layer 1 of RATISS Labs; it judges the GTT flagship repository by
+sealed git dependency in CI. Two-person lab, Yaoundé, Cameroon.*
 
 </div>
 
@@ -87,12 +96,28 @@ python -m ratiss chsh <valeur>                         # borne de Tsirelson |S| 
 ![architecture](docs/img/architecture-deux-couches.png)
 
 - **Couche 1 (ce dépôt) :** le protocole d'audit exécutable.
-- **Couche 2 (RATISS Labs GTT — Geological Topological Tech) :** l'unification
+- **Couche 2 ([RATISS Labs GTT — Geological Topological Tech](https://github.com/brossbernard2-pixel/RATISS-LABS-GTT)) :** l'unification
   de l'écosystème RATISS en une branche transdisciplinaire — visualisation,
   3D, graphes — construite sous les reines du chef de labo.
 - **La couche 1 juge la couche 2.** Une fois les deux debout, c'est ce
   protocole qui auditera GTT, pas l'inverse.
 - **Orphelins :** ce qui n'entre pas ne meurt pas — il gèle, daté, documenté.
+
+### 🛰️ Couche 2 en direct (état 2026-09-13)
+
+Les deux couches sont debout : le juge analyse GTT **en CI, à chaque
+push**, par dépendance git scellée (`MANIFEST` re-scellés vs `SEALS.json`).
+
+| Fait GTT | Valeur | Où vérifier |
+|---|---|---|
+| Phases construites | 1–7 (relais Rouge divulgué, auditeur ⏳ EN ATTENTE) | `docs/AUDIT_TRAIL.md` de GTT |
+| Tests | 108 passed, stdlib seule | CI `gtt.yml` |
+| Juge (ce dépôt, `python -m ratiss`) | exit 0 sur GTT | CI job `judge` |
+| Run externe réel LeWM/TwoRooms | delta **0.626131533384**, APPROVED | certification GTT byte-identique |
+| Rejeu indépendant | kit 1 commande fourni | `docs/AUDIT-INDEPENDANT-KIT.md` de GTT |
+
+La méthode de ce dépôt n'affirme rien sur GTT que GTT ne puisse rejouer :
+c'est le contrat des deux produits.
 
 ## 🧪 Preuve de concept — 10 runs externes (2026-09-13)
 
