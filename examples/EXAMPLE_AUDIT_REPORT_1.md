@@ -2,7 +2,7 @@ RATISS audit report — every verdict below is a computed value.
 
 - Target: RUN 1 — auto-rejeu https://raw.githubusercontent.com/jonathansearch/ratiss-audit-public/main
 - Auditor: Équipe Rouge
-- Date (UTC): 2026-09-13T01:18:00+00:00
+- Date (UTC): 2026-09-13T01:31:51+00:00
 
 | # | Check | Command | Expected | Obtained | Verdict |
 |---:|---|---|---|---|---|

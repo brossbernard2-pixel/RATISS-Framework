@@ -19,7 +19,19 @@ import urllib.request
 
 from ratiss.verify import is_osf_guid, is_ibm_job_id  # noqa: F401 (ré-export)
 
-__all__ = ["doi_resolves", "is_osf_guid", "is_ibm_job_id"]
+__all__ = ["doi_resolves", "is_doi_form", "is_osf_guid", "is_ibm_job_id"]
+
+import re
+
+_DOI_RE = re.compile(r"^10\.[0-9]{4,9}/\S+$")
+
+
+def is_doi_form(value: str) -> bool:
+    """Vrai ssi ``value`` a la forme syntaxique d'un DOI (10.XXXX/suffixe).
+
+    Garde-fou hors-ligne : une forme invalide ne mérite pas un appel réseau.
+    """
+    return bool(_DOI_RE.match(value or ""))
 
 
 def doi_resolves(doi: str, timeout: int = 30) -> bool:

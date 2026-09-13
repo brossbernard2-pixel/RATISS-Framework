@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="24" role="img">
+  <rect width="150" height="24" rx="5" fill="#0a1a22"/>
+  <rect x="0" y="0" width="72" height="24" rx="5" fill="#0f2c3a"/>
+  <text x="36" y="16" font-family="DejaVu Sans,Verdana,sans-serif" font-size="10" fill="#9aa7b0" text-anchor="middle">tests</text>
+  <text x="111" y="16" font-family="DejaVu Sans,Verdana,sans-serif" font-size="10" fill="#67e8f9" text-anchor="middle">51 passed</text>
+  <rect width="150" height="24" rx="5" fill="none" stroke="#164e63" stroke-width="1"/>
+</svg>

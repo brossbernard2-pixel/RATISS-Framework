@@ -2,7 +2,7 @@ RATISS audit report — every verdict below is a computed value.
 
 - Target: RUN 3 — plausibilité locale (borne de Tsirelson 2.8284271247461903)
 - Auditor: Équipe Rouge
-- Date (UTC): 2026-09-13T01:18:00+00:00
+- Date (UTC): 2026-09-13T01:31:51+00:00
 
 Commandes exactes rejouables (aucun réseau) :
 

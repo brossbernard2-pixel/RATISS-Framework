@@ -5,6 +5,7 @@ Une seule commande rejouable par un étranger :
 - ``python -m ratiss audit --url <url> --sha256 <hash>``
 - ``python -m ratiss audit-zenodo --record <id> --file <key>``
 - ``python -m ratiss chsh <value>``
+- ``python -m ratiss doi <doi>``
 
 Sortie : un rapport minimal + code de sortie 0 (conforme) ou 1 (divergence).
 Stdlib uniquement.
@@ -19,7 +20,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-from ratiss import bounds, report, verify
+from ratiss import bounds, ids, report, verify
 
 _ALLOWED_HASHES = {"sha256", "md5"}
 
@@ -121,6 +122,20 @@ def cmd_audit_zenodo(args: argparse.Namespace) -> int:
     return 0 if total_verdict(checks) == "conforme" else 1
 
 
+def cmd_doi(args: argparse.Namespace) -> int:
+    doi: str = args.doi[0]
+
+    if not ids.is_doi_form(doi):
+        print(f"doi {doi} -> forme invalide (attendu 10.XXXX/suffixe)")
+        return 1
+    ok = ids.doi_resolves(doi)
+    verdict = "RESOUT (conforme)" if ok else "NE RESOUT PAS (divergence)"
+    print(f"doi {doi} -> {verdict}")
+    print("  portée : résolution de l'identifiant seulement (Hérité 2 :"
+          " un identifiant enregistré n'est pas une revalidation en temps réel)")
+    return 0 if ok else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="ratiss",
@@ -141,6 +156,10 @@ def build_parser() -> argparse.ArgumentParser:
     chsh = sub.add_parser("chsh", help="vérifie la borne de Tsirelson d'une valeur")
     chsh.add_argument("value", nargs=1)
     chsh.set_defaults(func=cmd_chsh)
+
+    doi = sub.add_parser("doi", help="vérifie la résolution d'un DOI (Hérité 2)")
+    doi.add_argument("doi", nargs=1)
+    doi.set_defaults(func=cmd_doi)
 
     return parser
 

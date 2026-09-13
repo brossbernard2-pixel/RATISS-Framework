@@ -2,7 +2,7 @@ RATISS audit report — every verdict below is a computed value.
 
 - Target: RUN 2 — Zenodo record 6164620 / README.md (DOI 10.5281/zenodo.6164620)
 - Auditor: Équipe Rouge
-- Date (UTC): 2026-09-13T01:18:00+00:00
+- Date (UTC): 2026-09-13T01:31:51+00:00
 
 | # | Check | Command | Expected | Obtained | Verdict |
 |---:|---|---|---|---|---|

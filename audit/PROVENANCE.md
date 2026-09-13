@@ -35,3 +35,6 @@ Liste anonyme des 42 dépôts publics de `jonathansearch`, avec pour chacun :
 nombre de fichiers Python, dépendances tierces, présence ou absence de tests,
 présence ou absence de secrets accidentels (scan de formes `ghp_`, clés PEM,
 `.env`). Cet inventaire se fait **sans clé**, en lecture publique.
+| `ratiss/ids.py` (ext. `is_doi_form`) | spec campagne PoC 2026-09-13 (garde-fou hors-ligne forme DOI) | — | 2026-09-13 | réécrit from scratch | EN ATTENTE (visa Rouge post-push) |
+| `ratiss/__main__.py` (ext. `doi`) | spec campagne PoC 2026-09-13 (commande unique R7 pour identifiants) | — | 2026-09-13 | réécrit from scratch | EN ATTENTE (visa Rouge post-push) |
+| `proofs/` (campagne 10 runs) | cibles externes publiques : Zenodo 6164620/7347926/884117/1427076, PyPI openai+requests, Crossref 3 DOIs | — | 2026-09-13 | exécuté, pas copié | EN ATTENTE (relecture chef) |
