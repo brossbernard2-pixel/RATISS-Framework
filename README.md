@@ -106,7 +106,13 @@ python -m ratiss chsh <valeur>                         # borne de Tsirelson |S| 
 | Contrôle négatif | digest openai appliqué à la wheel requests | **1 DIVERGENCE DÉTECTÉE** |
 
 Une méthode qui ne sait pas dire non ne prouve rien : le contrôle négatif est
-là pour ça. Détails, portée des verdicts et limites :
+là pour ça.
+
+**Run spécial millénaire (2026-09-13) :** la revendication OpenAI
+Navier–Stokes auditée — papier scellé, dépôt Lean scellé au commit, registre
+Clay consulté (aucune résolution décernée), préprints concurrents non
+atteignables par identifiant stable. Détails :
+[`proofs/POC-MILLENAIRE-2026-09-13.md`](proofs/POC-MILLENAIRE-2026-09-13.md). Détails, portée des verdicts et limites :
 [`proofs/POC-EXTERNAL-AUDITS-2026-09-13.md`](proofs/POC-EXTERNAL-AUDITS-2026-09-13.md).
 
 ## ▶️ Reproduire (R7)

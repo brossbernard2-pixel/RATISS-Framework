@@ -35,3 +35,16 @@ run "N1 CONTROLE NEGATIF (divergence attendue, exit 1)" \
 
 echo
 echo "Attendu : Z1-Z4, P1-P2, D1-D3 = exit 0 ; N1 = exit 1."
+
+# --- runs millénaires, 2026-09-13 (scellés du jour) ---
+run "M1 papier OpenAI Navier-Stokes (scellé 2026-09-13)" \
+  python3 -m ratiss audit --url "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf" --sha256 0e779481c4da40bd28d1e642e1d8ca57447d129610df28dfa5a11e9af8ae228f
+run "M2 tarball Lean OpenAI au commit f9e8bc5b (scellé 2026-09-13)" \
+  python3 -m ratiss audit --url "https://codeload.github.com/openai/NavierStokesAndEuler/tar.gz/f9e8bc5b38b6e212696e8a30e3e91517af887bbd" --sha256 9832374e0926a8a9dfb19699e50bf8ddb957fb9e961e7cc85b8fb689eda2b1b7
+run "M3 arXiv 2410.22920v3 pdf (scellé 2026-09-13)" \
+  python3 -m ratiss audit --url "https://arxiv.org/pdf/2410.22920v3" --sha256 14c3a2423cbcec2d6ca5c54258ae4bd978f66631165fdb6217248bda280d45e8
+run "M3b doi 10.48550/arXiv.2410.22920" \
+  python3 -m ratiss doi 10.48550/arXiv.2410.22920
+
+echo
+echo "Attendu millénaire : M1, M2, M3, M3b = exit 0 (scellés du 2026-09-13)."
