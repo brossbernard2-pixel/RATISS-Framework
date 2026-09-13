@@ -38,11 +38,16 @@ def test_chaene_de_trois_entrees_valide(tmp_path):
 
 
 def test_chaene_tronquee_detectee(tmp_path):
+    """Couper la chaîne *au milieu* (garder entrées 1 et 3) brise le chaînage.
+
+    La propriété d'une chaîne de journal est : supprimer la dernière entrée
+    n'est pas une altération (aucun lien ne la référence) ; supprimer une
+    entrée intermédiaire casse le ``prev_hash`` de la suivante.
+    """
     p = _ajoute_trois(tmp_path)
-    # supprimer la dernière entrée rend le dernier lien incohérent :
     ent = journal.read_chain(p)
     with open(p, "w", encoding="utf-8") as fh:
-        for e in ent[:-1]:
+        for e in (ent[0], ent[2]):  # on supprime l'entrée 2 au milieu
             fh.write(json.dumps(e, sort_keys=True) + "\n")
     assert journal.verify_chain(p) is False
 
