@@ -22,6 +22,7 @@ __all__ = [
     "sha256_hex",
     "sha256_file",
     "sha256_url",
+    "hash_url",
     "is_sha256_hex",
     "is_osf_guid",
     "is_ibm_job_id",
@@ -53,8 +54,20 @@ def sha256_url(url: str, timeout: int = 30) -> str:
     C'est la primitive R7 : « ce que le serveur sert » et non « ce que
     je crois avoir poussé ».
     """
+    return hash_url(url, algo="sha256", timeout=timeout)
+
+
+def hash_url(url: str, algo: str = "sha256", timeout: int = 30) -> str:
+    """Hash du contenu servi à ``url``, selon ``algo``.
+
+    ``algo`` accepte ``"sha256"`` (défaut) et ``"md5"``. Zenodo publie des
+    checksums MD5, GitHub des SHA-256 : un audit multi-algorithme (R4) doit
+    pouvoir rejouer les deux.
+    """
+    if algo not in {"sha256", "md5"}:
+        raise ValueError(f"algo non supporté : {algo!r}")
     with urllib.request.urlopen(url, timeout=timeout) as resp:  # nosec: audit tool
-        h = hashlib.sha256()
+        h = hashlib.new(algo)
         while True:
             bloc = resp.read(1 << 16)
             if not bloc:

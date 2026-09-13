@@ -61,3 +61,33 @@ def test_formes_job_id_ibm():
 def test_check_hash_refuse_un_hash_malforme():
     with pytest.raises(ValueError):
         verify.check_hash_url("file:///dev/null", "pas-un-hash")
+
+
+def test_hash_url_md5_vecteur_connu():
+    # vecteur MD5 FIPS : md5("abc") == 900150983cd24fb0d6963f7d28e17f72
+    with tempfile.TemporaryDirectory() as d:
+        p = os.path.join(d, "abc.txt")
+        with open(p, "wb") as fh:
+            fh.write(b"abc")
+        assert verify.hash_url("file://" + p, algo="md5") == (
+            "900150983cd24fb0d6963f7d28e17f72"
+        )
+
+
+def test_hash_url_sha256_equivaut_a_sha256_url():
+    with tempfile.TemporaryDirectory() as d:
+        p = os.path.join(d, "artefact.bin")
+        with open(p, "wb") as fh:
+            fh.write(b"contenu de test")
+        assert verify.hash_url("file://" + p, algo="sha256") == (
+            verify.sha256_url("file://" + p)
+        )
+
+
+def test_hash_url_refuse_un_algo_inconnu():
+    with tempfile.TemporaryDirectory() as d:
+        p = os.path.join(d, "artefact.bin")
+        with open(p, "wb") as fh:
+            fh.write(b"x")
+        with pytest.raises(ValueError):
+            verify.hash_url("file://" + p, algo="sha1")
