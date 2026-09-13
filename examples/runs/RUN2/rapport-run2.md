@@ -1,0 +1,14 @@
+RATISS audit report — every verdict below is a computed value.
+
+- Target: zenodo record 6164620 / README.md
+- Auditor: banc d'essai
+- Date (UTC): 2026-09-13T01:16:37+00:00
+
+| # | Check | Command | Expected | Obtained | Verdict |
+|---:|---|---|---|---|---|
+| 1 | zenodo record 6164620 / README.md | `python -m ratiss audit-zenodo --record 6164620 --file README.md` | 8738f01d45dc9ba8c043be7fa8e1da09 | 8738f01d45dc9ba8c043be7fa8e1da09 | OK (conforme) |
+
+Checks: 1 — conformes: 1, divergences: 0, non calculés: 0
+
+Reproduction (R7) : chaque commande ci-dessus peut être rejouée par un étranger.
+
