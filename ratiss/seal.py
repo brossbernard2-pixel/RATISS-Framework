@@ -19,7 +19,7 @@ def canonical_json(params: dict) -> bytes:
 
     ``json.dumps`` (non utilisé ici) insère des espaces et préserve l'ordre
     d'insertion des clés : deux dictionnaires équivalents produiraient des
-    octets différents. La forme canonique garantit qu'un même manifeste scellé
+    octets différents. La forme canonique assure qu'un même manifeste scellé
     par deux machines produit le même hash.
     """
     return json.dumps(

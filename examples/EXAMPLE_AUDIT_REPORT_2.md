@@ -1,8 +1,8 @@
 RATISS audit report — every verdict below is a computed value.
 
-- Target: zenodo record 6164620 / README.md
-- Auditor: banc d'essai
-- Date (UTC): 2026-09-13T01:16:37+00:00
+- Target: RUN 2 — Zenodo record 6164620 / README.md (DOI 10.5281/zenodo.6164620)
+- Auditor: Équipe Rouge
+- Date (UTC): 2026-09-13T01:18:00+00:00
 
 | # | Check | Command | Expected | Obtained | Verdict |
 |---:|---|---|---|---|---|
@@ -11,4 +11,3 @@ RATISS audit report — every verdict below is a computed value.
 Checks: 1 — conformes: 1, divergences: 0, non calculés: 0
 
 Reproduction (R7) : chaque commande ci-dessus peut être rejouée par un étranger.
-

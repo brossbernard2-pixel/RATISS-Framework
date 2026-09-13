@@ -2,7 +2,7 @@
 
 - Le marqueur ``network`` est enregistré : les tests qui exigent un accès
   réseau sont exclus par défaut de ``python -m pytest -q``.
-- La passer en revue explicite (jamais de garanties "certifiées") reste
+- La passer en revue explicite (aucune promesse de résultat) reste
   cohérente avec R7 : la reproduction anonyme doit rester offline.
 """
 
