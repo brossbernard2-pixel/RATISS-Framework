@@ -9,6 +9,7 @@ le module ne part pas.
 | `ratiss/verify.py` | aucun (règles R4–R7 + connaissances de domaine corrigées le 2026-09-12) | — | 2026-09-12 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
 | `ratiss/verify.py` (extension) | passage multi-algorithme, doc Zenodo (md5) + GitHub (sha256) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
 | `ratiss/seal.py` | spec du prompt (§2.2 scellé de manifeste R5) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
+| `ratiss/journal.py` | spec du prompt (§2.3 journal des déviations chaîné R5) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
 
 ## Règles de ce tableau
 
