@@ -13,6 +13,7 @@ le module ne part pas.
 | `ratiss/bounds.py` | spec du prompt (§2.4 plausibilité physique R4, borne de Tsirelson) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
 | `ratiss/ids.py` | spec du prompt (§2.5 identifiants réels Hérité 2 + docs.quantum.ibm.com/guides/save-jobs) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
 | `ratiss/report.py` | spec du prompt (§2.6 rapport d'audit + annexe R7) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
+| `ratiss/__main__.py` | spec du prompt (§2.7 commande unique, stdlib uniquement) | — | 2026-09-13 | réécrit from scratch | Équipe Rouge (assistant), tests verts localement + CI |
 
 ## Règles de ce tableau
 
