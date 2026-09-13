@@ -1,6 +1,6 @@
 <div align="center">
 
-![RATISS Labs](https://raw.githubusercontent.com/jonathansearch/ratiss-labs-site/master/public/ratiss_labs_logo.webp)
+![RATISS Labs](docs/img/logo-ratiss-labs.png)
 
 # RATISS-Framework
 ### le protocole d'audit scientifique exécutable
