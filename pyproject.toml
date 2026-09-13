@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratiss-framework"
+version = "0.1.0"
+description = "Couche 1 du RATISS-Framework : méthode d'audit vérifiable (R7)."
+requires-python = ">=3.9"
+
+[tool.setuptools]
+packages = ["ratiss"]
